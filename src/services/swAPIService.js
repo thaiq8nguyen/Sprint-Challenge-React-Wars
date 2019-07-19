@@ -23,5 +23,9 @@ export default {
 
   getCharacterStarship(url) {
     return client.get(url);
+  },
+
+  getCharacterPage(page) {
+    return client.get("/people/?page=" + page);
   }
 };

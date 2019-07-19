@@ -21,9 +21,23 @@ const Characters = () => {
     setCharacter(characters[index]);
   };
 
-  const goToNextPage = url => {};
+  const goToCharacterPage = direction => {
+    const regex = /\d+$/;
 
-  const goToPreviousPage = url => {};
+    if (nextPage !== null || previousPage !== null) {
+      let page = nextPage;
+
+      if (direction === "previous") {
+        page = previousPage;
+      }
+
+      StarWar.getCharacterPage(page.match(regex)[0]).then(response => {
+        response.data.next ? setNextPage(response.data.next) : null;
+        response.data.previous ? setPreviousPage(response.data.previous) : null;
+        setCharacters(response.data.results);
+      });
+    }
+  };
   return (
     <section className="section">
       <div className="container">
@@ -43,18 +57,18 @@ const Characters = () => {
                   <div className="level">
                     <div className="level-left">
                       <a
-                        href="#"
+                        href="javascript:void(0);"
                         className="level-item"
-                        onClick={goToPreviousPage}
+                        onClick={() => goToCharacterPage("previous")}
                       >
                         Previous
                       </a>
                     </div>
                     <div className="level-right">
                       <a
-                        href="#"
+                        href="javascript:void(0);"
                         className="level-item"
-                        onClick={goToPreviousPage}
+                        onClick={() => goToCharacterPage("next")}
                       >
                         Next
                       </a>
