@@ -9,11 +9,19 @@ export default {
     return client.get("/people/");
   },
 
-  getCharacterFilms(url) {},
+  getCharacterFilm(url) {
+    return client.get(url);
+  },
 
-  getCharacterSpecies(url) {},
+  getCharacterSpecie(url) {
+    return client.get(url);
+  },
 
-  getCharacterVehicles(url) {},
+  getCharacterVehicle(url) {
+    return client.get(url);
+  },
 
-  getCharacterStarships(url) {}
+  getCharacterStarship(url) {
+    return client.get(url);
+  }
 };

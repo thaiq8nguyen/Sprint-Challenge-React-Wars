@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StarWar from "/services/swAPIService";
+import CharacterDetails from "/components/CharacterDetails/CharacterDetails";
 import CharactersTable from "./CharactersTable";
 
 const Characters = () => {
@@ -20,14 +21,6 @@ const Characters = () => {
     setCharacter(characters[index]);
   };
 
-  const selectFilm = url => {};
-
-  const selectSpecie = url => {};
-
-  const selectVehicle = url => {};
-
-  const selectStarShip = url => {};
-
   const goToNextPage = url => {};
 
   const goToPreviousPage = url => {};
@@ -39,77 +32,7 @@ const Characters = () => {
           <div className="card-content">
             <div className="columns">
               <div className="column">
-                {character && (
-                  <div className="box">
-                    <article className="media">
-                      <div className="media-content">
-                        <div className="content">
-                          <p>
-                            <strong className="has-text-info is-size-3">
-                              {character.name}
-                            </strong>
-                          </p>
-                        </div>
-                        <div className="columns is-multiline">
-                          <div className="column">
-                            <div className="content">
-                              <p>Films</p>
-                              <ul>
-                                {character.films.map((film, index) => (
-                                  <li key={index}>
-                                    <a href="#">Film # {index + 1}</a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                          <div className="column">
-                            <div className="content">
-                              <p>Species</p>
-                              <ul>
-                                {character.species.map((specie, index) => (
-                                  <li key={index}>
-                                    <a href="#">Specie # {index + 1}</a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                          {character.vehicles.length > 0 && (
-                            <div className="column">
-                              <div className="content">
-                                <p>Vehicles</p>
-                                <ul>
-                                  {character.vehicles.map((vehicle, index) => (
-                                    <li key={index}>
-                                      <a href="#">Vehicle # {index + 1}</a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </div>
-                          )}
-                          {character.starships.length > 0 && (
-                            <div className="column">
-                              <div className="content">
-                                <p>Starships</p>
-                                <ul>
-                                  {character.starships.map(
-                                    (starship, index) => (
-                                      <li key={index}>
-                                        <a href="#">Starship # {index + 1}</a>
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                )}
+                {character && <CharacterDetails character={character} />}
               </div>
               <div className="column">
                 <CharactersTable
