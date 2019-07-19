@@ -1,0 +1,42 @@
+{
+  "name": "Sprint-Challenge-React-Wars",
+  "version": "1.0.0",
+  "description": "This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored ReactJS, Function Components, component state and side effects. In your challenge for this Sprint, you will demonstrate proficiency by creating an application that uses ReactJS to consume live data retrieved from the World Wide Web and style that data nicely on the page.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js, html}\" --write",
+    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaiq8nguyen/Sprint-Challenge-React-Wars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaiq8nguyen/Sprint-Challenge-React-Wars/issues"
+  },
+  "homepage": "https://github.com/thaiq8nguyen/Sprint-Challenge-React-Wars#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bulma": "^0.7.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "dotenv": "^8.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2"
+  }
+}
