@@ -1,12 +1,12 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://swapi.co/api/"
+  baseURL: "https://henry-mock-swapi.herokuapp.com/api"
 });
 
 export default {
   getAllCharacters() {
-    return client.get("/people/");
+    return client.get();
   },
 
   getCharacterFilm(url) {
