@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./CharactersTable.scss";
 const CharactersTable = ({ characters, selectCharacter }) => {
   return (
     <div>
@@ -18,7 +18,7 @@ const CharactersTable = ({ characters, selectCharacter }) => {
         </thead>
         <tbody>
           {characters.map((character, index) => (
-            <tr key={index}>
+            <tr key={index} className={styles.row}>
               <th>{index + 1}</th>
               <td>
                 <a
